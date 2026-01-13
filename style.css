@@ -1,9 +1,50 @@
+
 body {
-  color: #E3B505;
-  background-image: url("https://opengameart.org/sites/default/files/512x512_purple_nebula_1.png");
-  font-family: "Courgette";
+  --text: #e6eff2;
+  --background: #060c0e;
+  --primary: #a6c9d7;
+  --secondary: #305f73;
+  --accent: #60a4c1;
+  color: var(--text);
+  background-color: var(--background);
   margin: 0px;
-  font-size: 2vw;
+  font-size: 1.5rem;
+}
+
+.nav-tab {
+  background-color: #0f1d22;
+  display: flex;
+  height: 3.5rem;
+}
+
+.nav-tab input {
+  display: none;
+}
+
+.nav-tab input:checked + label {
+  background-color: var(--background);
+  border-radius: 15px 15px 0 0;
+}
+
+.nav-tab label {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-tab label:hover {
+  background-color: var(--secondary);
+  border-radius: 15px 15px 0 0;
+}
+
+[class^="tab-"] {
+  display: none;
+}
+
+body:has(:checked:nth-of-type(1)) .tab-home,
+body:has(:checked:nth-of-type(2)) .tab-games,
+body:has(:checked:nth-of-type(3)) .tab-projects{
+  display: block;
 }
 
 .card-title {
@@ -16,16 +57,36 @@ body {
   text-align: left;
 }
 
-.projects-page {
-  text-align: center;
-  padding-top: 5%;
+h1 {
+  text-align: left;
+  font-size: 5rem;
+  color: #a6c9d7
 }
 
-h1 {
+.tab-home {
+  margin: 0vw 5vw;
+}
+
+table {
+  color: black;
+  background-color: #1a1a17;
+  border-collapse: collapse;
+  margin-right: auto;
+}
+
+th, td {
+  /*border: 0.3vw solid #56A3A6;*/
+  border: 0.3vw solid black;
+  padding: 10px;
+}
+
+td {
+  color: #e6eff2;
+}
+
+.tab-projects {
   text-align: center;
-  font-size: 10vw;
-  margin: 1%;
-  color: #DB504A
+  padding-top: 5%;
 }
 
 .card-container {
@@ -73,34 +134,14 @@ h1 {
   align-items: center;
   text-decoration: none;
   width: 18vw;
-  background-color: #2E3A72;
-  color: #E3B505;
-  border: 0.3vw solid #2E1C47;
+  color: #e6eff2;
+  background-color: #305f73;
+  /*border: 0.3vw solid #2E1C47;*/
   border-radius: 15px;
   aspect-ratio: 5 / 7; 
   transition: border 0.5s ease, border-radius 0.5s ease, scale 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
 }
 
-.about-me {
-  margin-left: 25%;
-}
-
-table {
-  color: black;
-  background-color: #1a1a17;
-  border-collapse: collapse;
-  margin-right: auto;
-}
-
-th, td {
-  /*border: 0.3vw solid #56A3A6;*/
-  border: 0.3vw solid black;
-  padding: 10px;
-}
-
-td {
-  color: white;
-}
 
 .button-wrapper {
   display: flex;
@@ -116,9 +157,9 @@ td {
   text-decoration: none;
   width: 18vw;
   height: 3vw;
-  background-color: #56A3A6;
-  color: #2E1C47;
-  border: 0.3vw solid #E3B505;
+  color: #e6eff2;
+  background-color: #60a4c1;
+  /*border: 0.3vw solid #E3B505;*/
   border-radius: 10px;
   padding: 2vw;
   position: absolute;
@@ -127,6 +168,6 @@ td {
   
 .games-button:hover {
   scale: 1.1;
-  border: 0.5vw solid #2E1C47;
+  /*border: 0.5vw solid #2E1C47;*/
   border-radius: 0;
 }

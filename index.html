@@ -1,21 +1,27 @@
+<!DOCTYPE html>
 <html>
   <head>
     <title>About me</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	  <link rel="stylesheet" href="style.css">
   <head>
   <body>
-    <div class="about-me">
+
+    <div class="nav-tab">
+      <input type="radio" id="home" name="tabs" checked/>
+      <label for="home">Home</label>
+      <input type="radio" id="games" name="tabs"/>
+      <label for="games">My Games</label>
+      <input type="radio" id="projects" name="tabs"/>
+      <label for="projects">My Projects</label>
+    </div>
+
+    <div class="tab-home">
       <h1 style="text-align: left;">About Me</h1>
-      <h2>Fun and true facts:</h2>
-      <ol>
-        <li>Javascript is my first langauge 😎</li>
-        <li>I make games</li>
-        <li>Godot > Unity</li>
-        <li>HTML is not a programming language 😡</li>
-      </ol>
+      <p>I am a self-taught programmer and an aspiring game developer. I first started off learning HTML and Javascript to make a browser game. After which, I explored game engines such as Unity and Godot for a better tool to make better games. </p>
+    
       <h2>Programming Language Tier List</h2>
       <table>
         <tr>
@@ -40,11 +46,15 @@
         </tr>
       </table>
     </div>
-    <div class="button-wrapper">
-    <a class="games-button" href="https://mnjq2006.itch.io/">My Games</a>
+
+    <div class="tab-games"">
+      <div class="button-wrapper">
+        <a class="games-button" href="https://mnjq2006.itch.io/">My Games</a>
+      </div>
     </div>
-    <h1>Projects</h1>
-    <div class="projects-page">
+    
+    <div class="tab-projects">
+      <h1>Projects</h1>
       <div class="card-container">
         
         <a class="card card-4">
@@ -74,7 +84,7 @@
           </div>
         </a>
         
-        <a class="card card-1" href="www.youtube.com">
+        <a class="card card-1" href="https://www.youtube.com">
           <div>
           <p class="card-title">Pokedex</p>
           <ul class="card-info">
